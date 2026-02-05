@@ -1,0 +1,12 @@
+TF-IDF
+
+    TF-IDF answers one question: "How important is this word to this specific document?"
+    It balances two competing ideas:
+
+    1. If a word appears frequently in a document, it's probably important to that document
+    2. But if that word appears in every document, it's not actually distinctive
+
+    It's measuring ONE word at a time from two perspectives:
+
+    TF: How common is this word within this specific document?
+    IDF: How rare is this word across all documents?
