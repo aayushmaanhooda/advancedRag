@@ -1,0 +1,11 @@
+This is Step 1 of RAG - breaking down loaded documents into smaller pieces for embedding and retrieval.
+
+Types of Chunking Strategies
+
+1. Fixed-Size Chunking (Simplest)
+2. Sentence-Based Chunking
+3. Recursive Character Splitting (LangChain Default)
+4. Semantic Chunking (Advanced!) - Use embeddings to find natural breakpoints based on meaning.
+5. Document-Structure-Aware Chunking - Use document structure (headings, sections) as natural boundaries.
+6. Sliding Window Chunking - Create overlapping chunks by sliding a window across text.
+

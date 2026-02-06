@@ -1,0 +1,11 @@
+This is Step 0 of RAG - loading documents
+
+Types of Document Loaders
+
+1. PyPDF2 / PyMuPDF (fitz)
+2. Unstructured.io
+3. Docling (IBM - BEST for Complex PDFs!)
+4. OCR Solutions (For Scanned PDFs)
+
+So yes - OCR = pretrained ML models converting image → text!
+

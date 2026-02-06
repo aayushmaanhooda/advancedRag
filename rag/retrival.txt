@@ -1,0 +1,12 @@
+This is Step 4 of RAG - techniques to retrieve the most relevant chunks from your vector store to answer user queries.
+
+Basic Retrieval: Semantic Search
+Strategy 1: Top-K Retrieval (Baseline)
+Strategy 2: Similarity Threshold - Don't return chunks below a similarity threshold
+
+Advanced Retrieval Strategies
+Strategy 3: Hybrid Search (Keyword + Semantic) - Combine sparse (BM25) and dense (vector) search
+                                                Combine using RRF (Reciprocal Rank Fusion)
+
+Strategy 4 :Re-ranking (Two-Stage Retrieval) - Retrieve many chunks cheaply, then re-rank with better model:
+Strategy 5 :MMR (Maximal Marginal Relevance) - Avoid returning similar/redundant chunks

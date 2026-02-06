@@ -1,0 +1,26 @@
+This is Step 2 of RAG - converting text chunks into dense vector representations for semantic search.
+
+Embeddings = Converting text into numbers (vectors) that capture semantic meaning
+
+
+Types of Embedding Models
+
+Model 1: Sentence Transformers (Popular Open-Source)
+Model 2: OpenAI Embeddings (Best Quality)
+Model 3: Cohere Embeddings
+            Unique Feature: Asymmetric Embeddings
+
+            Different embeddings for documents vs queries
+            input_type="search_document" for chunks
+            input_type="search_query" for user queries
+            Better retrieval accuracy!
+Model 4: Voyage AI (RAG-Specialized)
+Model 5: Multimodal Embeddings (Images + Text)
+
+
+Similarity Metrics
+
+Cosine Similarity (Most Common)
+Dot Product
+Euclidean Distance
+

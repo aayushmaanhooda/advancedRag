@@ -1,0 +1,47 @@
+This is Step 3 of RAG - storing and efficiently searching through millions of embeddings.
+
+4How Vector Databases Work
+
+Core Concept: Approximate Nearest Neighbor (ANN) SearchInstead of checking every vector, 
+                use smart algorithms to find approximately the closest vectors.
+
+Tradeoff:
+
+Exact search: 100% accurate, but slow
+ANN search: 95-99% accurate, but 100x faster!
+
+Common ANN Algorithms:
+1. HNSW (Hierarchical Navigable Small World)
+2. IVF (Inverted File Index)
+            How it works:
+    ```
+        1. Cluster all vectors into groups (using k-means)
+
+        Cluster 1: [vectors about Python]
+        Cluster 2: [vectors about Java]
+        Cluster 3: [vectors about databases]
+        ...
+
+        2. When searching:
+        - Find which clusters are closest to query
+        - Only search within those clusters!
+        - Ignore other clusters
+    ```
+
+3. LSH (Locality Sensitive Hashing)
+        How it works:
+        
+        Hash similar vectors to the same bucket:
+
+        hash("Python programming") → Bucket #42
+        hash("Coding in Python")   → Bucket #42  ← Same bucket!
+        hash("I love pizza")       → Bucket #78  ← Different bucket
+
+
+Key Vector Store Concepts
+
+Concept 1: Indexing vs Querying
+Concept 2: Metadata Filtering - Combine vector search with metadata filters
+Concept 3: Sharding / Partitioning
+Concept 4: Quantization (Compression)
+Concept 5: Hybrid Indexes
