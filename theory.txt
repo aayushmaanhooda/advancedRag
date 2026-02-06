@@ -10,3 +10,18 @@ TF-IDF
 
     TF: How common is this word within this specific document?
     IDF: How rare is this word across all documents?
+
+
+HYBRID-search
+in hybrid search we combine sparse (keyword-based) and dense (semantic/vector-based) results.
+
+The most common technique is Reciprocal Rank Fusion (RRF), which is database-agnostic and works 
+the same way regardless of which vector DB you're using.
+
+RRF_score(doc) = Σ (1 / (k + rank_i))
+
+Example:
+Document appears at rank 3 in sparse search and rank 5 in dense search
+RRF score = 1/(60+3) + 1/(60+5) = 1/63 + 1/65 ≈ 0.0313
+
+Documents are then re-ranked by their RRF scores.
